@@ -1,0 +1,44 @@
+// Question 1
+// Write a function called sumRange. 
+// It will take a number and return the sum of all numbers from 
+// 1 up to the number passed in.
+
+
+/*
+HTDD
+A possible structure definition (not until compound data)
+A type comment that defines a new type name and describes how to form data of that type.
+An interpretation that describes the correspondence between information and data.
+One or more examples of the data.
+A template for a 1 argument function operating on data of this type.
+*/
+// HERE NO NEED BECAUSE ATOMIC DATA
+
+/*
+HTDF
+Signature, purpose and stub.
+Define examples, wrap each in check-expect.
+Template and inventory.
+Code the function body.
+Test and debug until correct
+*/
+
+// Signature number -> number
+// Purpose Return return the sum of all numbers from 1 up to the number passed in.
+// Stub
+// function sumRange(number) {}
+// Examples
+console.assert(sumRange(3) === 6, "Error message");
+console.assert(sumRange(1) === 1, "Error message");
+console.assert(sumRange(2) === 3, "Error message");
+// Template
+/*function sumRange(number) {
+    // ... number
+}*/
+
+function sumRange(number) {
+    // ... number
+}
+
+
+// Course https://courses.edx.org/courses/course-v1:UBCx+SPD1x+2T2015/77860a93562d40bda45e452ea064998b/#S3
