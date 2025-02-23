@@ -1,16 +1,10 @@
 import "./styles.css";
-import { Characters } from "./Characters.js";
-import {Sprites} from "./Sprites.js";
-
-let x = 100,
-  y = 75,
-  speed = 20; // Initial position
-
-// differs from file name only in casing
-
+import { Enemies, Player } from "./Characters.js";
+import { Sprites } from "./Sprites.js";
 
 const sprite = new Sprites();
-const josh = new Characters(sprite);
+const player = new Player(sprite, "Josh", "blue");
+const enemy1 = new Enemies(sprite);
 
 function draw() {
   const canvas = document.getElementById("canvas");
@@ -21,7 +15,8 @@ function draw() {
     ctx.fillStyle = "#CEE741";
     ctx.rect(0, 0, 600, 600);
     ctx.fill();
-    josh.drawPlayer(ctx);
+    enemy1.draw(ctx);
+    player.draw(ctx);
   }
 }
 
@@ -29,13 +24,13 @@ window.addEventListener("load", draw);
 
 window.onkeyup = function (e) {
   if (e.key === "ArrowUp") {
-    y -= speed; // Move up
+    player.moveUp(); // Move up
   } else if (e.key === "ArrowDown") {
-    y += speed; // Move down
+    player.moveDown(); // Move Down
   } else if (e.key === "ArrowLeft") {
-    x -= speed; // Move left
+    player.moveLeft(); // Move Left
   } else if (e.key === "ArrowRight") {
-    x += speed; // Move right
+    player.moveRight(); // Move Right
   }
   draw(); // Redraw with new position
 };
