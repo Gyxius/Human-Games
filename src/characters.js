@@ -1,25 +1,19 @@
-/*
-color : red
-name : npc
-xposition : 200
-yposition : 75
-shape : rectangle
-*/
+/* Create the classes for Sprites 
+Like if the player class is a circle then we return a rectangular skin */
 
-/* Create the classes or skins 
-Like if the player class is a circle then we return a rectangular circle */
-
-
-
-function Characters () {
-    id = 0;
-    const color = "red";
-    const name = "npc";
-    let xposition = 200;
-    let yposition = 75;
-    let shape = "rectangle";
-    return { id, xposition, yposition};
+class Characters {
+  constructor(sprite, name = "npc", color = "blue") {
+    this.id = 0;
+    this.color = color;
+    this.name = name;
+    this.xPosition = 200;
+    this.yPosition = 75;
+    this.sprite = sprite;
   }
-    
-const josh = Characters();
- 
+  drawPlayer(ctx) {
+    console.log("here");
+    this.sprite.Circle(ctx, this.xPosition, this.yPosition, this.color);
+  }
+}
+
+export { Characters };
